@@ -10,3 +10,14 @@
 ![
 ](https://github.com/Juanyeas/ECE4180_Final/blob/f79e559e1e9e1f96313151d9817af8d4ba31d226/Picture1.jpg)
 
+
+### Hardware Parts:
+- SparkFun shadow robot chassis
+- mbed NXP LPC1768 Microcontroller
+- uLCD-144-G2 module
+- 2x HC-SR04 sonar sensor
+- Adafruit Bluefruit BLE board
+- Dual H-bridge driver breakout board
+- Speaker
+- Breadboard and wires
+
