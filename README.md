@@ -22,7 +22,7 @@
 -  2x DC motors
 - Speaker w/ Amplifier
 - Breadboard and wires
-  #### Assembly:
+  #### Assembly (wiring):
   DC motors:
   | Mbed LPC1768 | H-Bridge motor driver  | DC motors | Battery pack |
   |------------- | ---------------------- | --------- | ------------ |
@@ -75,7 +75,7 @@ Speaker:
 |------------ | ----------- | --------- | ----------- |
 | p 23 | | B | |
 | | - | C |  |
-| | | E | - | Gnd(-)
+| | | E |  Gnd(-) |
 | |+ |  | 5V(+)
 
 ### Code:
