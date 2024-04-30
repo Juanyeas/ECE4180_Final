@@ -79,11 +79,17 @@ Speaker:
 | |+ |  | 5V(+)
 
 ### Code:
-The general concpet behind our code was to use RTOS threads to control the hardware while monitoring changes from both the bluetooth controller and sonar sensors. After the  installation of all hardware conponpents, our next step was to add to correct C++ libraries to our project code which would allow us to run the software related to each of the hardware components. Many of the source files are include in mbed's main library but a few of the hardware components required additional libraries to function correctly.
+The general concept behind our code was to use RTOS threads to control the motor while monitoring changes from both the bluetooth controller and sonar sensors. After the  installation of all hardware conponpents, our next step was to add to correct C++ libraries to our project code which would allow us to run the software related to each of the hardware components. Many of the source files were included in mbed's main library but a few of the hardware components required additional libraries to function correctly.
 #### Required Libraries:
   - Mbed: [mbed RTOS 2](http://mbed.org/users/mbed_official/code/mbed-rtos/#ee87e782d34f)
   - LCD: [4DGL-uLCD](https://os.mbed.com/users/4180_1/code/4DGL-uLCD-SE/#2cb1845d768165993c6c4e2f245a16ea983a8c1f) and [uLCD Fonts](http://mbed.org/users/dreschpe/code/LCD_fonts/#d0b7d7bf1f56)
   - Motors: [Motor Drvier](https://os.mbed.com/users/littlexc/code/Motordriver/#3110b9209d3ccd8b17a42e80102592979dbcc549)
 
+#### Threads:
+- uLCD Thread
+- Back Sonar Thread
+- Front Sonar Thread
+- Speaker Thread
+- Main (bluetooth) thread
     
 
