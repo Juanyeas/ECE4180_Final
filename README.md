@@ -22,6 +22,6 @@
 - Breadboard and wires
 
 ### Code:
-The general concpet behind our code was to use RTOS threads to control the hardware while monitoring changes ftom either the bluetooth or sonar sensors. After the  installation of all hardware conponpents, our next step was to add to correct C++ libraries to our project code which would allow us to run the software related to each of the hardware components.
+The general concpet behind our code was to use RTOS threads to control the hardware while monitoring changes ftom either the bluetooth controller or sonar sensors. After the  installation of all hardware conponpents, our next step was to add to correct C++ libraries to our project code which would allow us to run the software related to each of the hardware components.
 #### Required Libraries:
   - 
