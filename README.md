@@ -87,9 +87,23 @@ The general concept behind our code was to use RTOS threads to control the motor
 
 #### Threads:
 - uLCD Thread
+  - Prints the current mode and motor action to uLCD every second
+    
 - Back Sonar Thread
+  - Gets the current distance from the back sensor
+  - If distance is less 10 cm stops motors then:
+   - If mode 3:  Reverse  motors
+   - If mode 4: Changes direction then proceeds
 - Front Sonar Thread
+  - Gets the current distance from the front sensor
+  - If distance is less 10 cm stops motors then:
+   - If mode 3:  Reverse  motors
+   - If mode 4: Changes direction then proceeds
 - Speaker Thread
+  - Loops the daisy bell song on the speaker
 - Main (bluetooth) thread
+  - Uses Bluetooth to Pick mode
+  - If mode 1 or 2: Manually control motors
+  - If mode 3 or 4: Motors move automactically 
     
 
