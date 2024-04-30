@@ -105,5 +105,7 @@ The general concept behind our code was to use RTOS threads to control the motor
   - Uses Bluetooth to Pick mode
   - If mode 1 or 2: Manually control motors
   - If mode 3 or 4: Motors move automactically 
-    
+
+## DEMO:
+
 
