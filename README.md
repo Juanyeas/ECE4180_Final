@@ -20,14 +20,14 @@
 - Adafruit Bluefruit BLE board
 - Dual H-bridge driver breakout board
 -  2x DC motors
-- Speaker
+- Speaker w/ Amplifier
 - Breadboard and wires
   #### Assembly:
   DC motors:
   | Mbed LPC1768 | H-Bridge motor driver  | DC motors | Battery pack |
   |------------- | ---------------------- | --------- | ------------ |
   | -- | Vm | |  5V(+) | 
-  | Gnd |Gnd | | - | 
+  | Gnd |Gnd | | Gnd (-)| 
   | -- | Vcc | |
   | p21 | PWMB | |
   | p5 | BIN2 | |
@@ -45,7 +45,7 @@ uLCD:
 |Mbed LPC1768 | uLCD  Header| uLCD Cable| Battery Pack |
 |------------ | ----------- | --------- | ----------- |
 | - | 5V | 5V | 5V(+) |
-| Gnd | Gnd | Gnd | |  
+| Gnd | Gnd | Gnd | Gnd(-)|  
 | TX = p13 | RX | TX |
 | RX = p14 | TX | RX |
 | p12 | Reset | Reset | 
@@ -53,7 +53,7 @@ uLCD:
 Bluetooth module:
 |Mbed LPC1768 | Adafruit BLE| Battery Pack |
 |------------ | ----------- |  ----------- |
-|Gnd | Gnd | | 
+|Gnd | Gnd | Gnd (-)| 
 | - | Vin | 5V(+) |
 | - | RTS | |
 | Gnd | CTS | 
@@ -61,9 +61,22 @@ Bluetooth module:
 | p10(TX) | RXI |
 
 Sonar Sensors:
-|Mbed LPC1768 | uLCD  Header| uLCD Cable| Battery Pack |
+|Mbed LPC1768 | HC  SR04 (front)| HC- SR04 (back)| Battery Pack |
 |------------ | ----------- | --------- | ----------- |
+| - | Vcc | Vcc | 5V(+) |
+| Gnd | Gnd | Gnd | Gnd (-) |
+| p29 | trig | 
+| p30 | echo | 
+| p28 | | trig |
+| p27 |  | echo |
 
+Speaker:
+|Mbed LPC1768 |  Speaker|  2N3904 Amp |Battery Pack |
+|------------ | ----------- | --------- | ----------- |
+| p 23 | | B | |
+| | - | C |  |
+| | | E | - | Gnd(-)
+| |+ |  | 5V(+)
 
 ### Code:
 The general concpet behind our code was to use RTOS threads to control the hardware while monitoring changes from both the bluetooth controller and sonar sensors. After the  installation of all hardware conponpents, our next step was to add to correct C++ libraries to our project code which would allow us to run the software related to each of the hardware components. Many of the source files are include in mbed's main library but a few of the hardware components required additional libraries to function correctly.
